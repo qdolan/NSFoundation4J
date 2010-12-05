@@ -1,0 +1,7 @@
+Experimental non WO specific re-implementation of Foundation.
+
+This code base is derived from some work I did originally on a GWT based project, it is intended to be useful for experimenting with using Foundation in Java applications that don't use WO. The implementation is stable, but is not fully complete nor is it 100% API compatible with WO, but it is close.
+
+Rather than keep this hidden in my personal code repo I am making it available to the community in the event someone else finds parts of it useful.
+
+Currently there is no documentation, look at the source or the javadoc from WO for clarification on the usage of this code.
