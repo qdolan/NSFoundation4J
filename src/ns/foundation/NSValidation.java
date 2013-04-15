@@ -7,8 +7,9 @@ public interface NSValidation {
   public Object validateValueForKey(Object value, String key) throws ValidationException;
 
   public static class ValidationException extends RuntimeException {
+    private static final long serialVersionUID = -6550198639705626107L;
 
-    public ValidationException(String message) {
+	public ValidationException(String message) {
       super(message);
     }
   }

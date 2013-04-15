@@ -1,7 +1,9 @@
 package ns.foundation;
 
+
 public class NSMutableRange extends NSRange {
-	
+	private static final long serialVersionUID = 6985879405938984360L;
+
 	public NSMutableRange() {
 		super();
 	}

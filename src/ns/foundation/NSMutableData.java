@@ -3,7 +3,9 @@ package ns.foundation;
 import java.util.Arrays;
 
 
+
 public class NSMutableData extends NSData {
+  private static final long serialVersionUID = 9094258655471119002L;
 
   public NSMutableData() {
     this(128);

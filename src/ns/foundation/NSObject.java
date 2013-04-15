@@ -2,7 +2,13 @@ package ns.foundation;
 
 import java.util.EnumSet;
 
+import ns.foundation._private._NSObject;
+import ns.foundation.collections.NSSet;
+import ns.foundation.kvc.NSKeyValueCoding;
+import ns.foundation.kvc.NSKeyValueCodingAdditions;
+
 public class NSObject implements _NSObject {
+  private static final long serialVersionUID = 1876376685430637291L;
 
   public NSObject self() {
     return this;

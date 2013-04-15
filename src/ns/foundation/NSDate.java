@@ -4,6 +4,8 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 
 public class NSDate extends Date implements NSCoding {
+  private static final long serialVersionUID = 5053057561640821882L;
+
   public static final int NSOrderedAscending = -1;
   public static final int NSOrderedSame = 0;
   public static final int NSOrderedDescending = 1;

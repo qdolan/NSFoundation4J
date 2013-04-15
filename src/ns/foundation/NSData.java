@@ -1,11 +1,14 @@
 package ns.foundation;
 
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.Serializable;
+import java.io.UnsupportedEncodingException;
 import java.util.Arrays;
 
 public class NSData implements Serializable, Cloneable {
+  private static final long serialVersionUID = 1906556235936400856L;
 
   public static final NSData EmptyData = new NSData();
   protected byte[] _bytes;
@@ -44,17 +47,17 @@ public class NSData implements Serializable, Cloneable {
     this(otherData.bytes());
   }
 
-  // private static byte[] bytesWithEncoding(String value, String encoding) {
-  // try {
-  // return value.getBytes(encoding);
-  // } catch (UnsupportedEncodingException e) {
-  // throw new RuntimeException(e);
-  // }
-  // }
-  //	
-  // public NSData(String value, String encoding) throws UnsupportedEncodingException {
-  // this(bytesWithEncoding(value, encoding));
-  // }
+  private static byte[] bytesWithEncoding(String value, String encoding) {
+      try {
+          return value.getBytes(encoding);
+      } catch (UnsupportedEncodingException e) {
+          throw new RuntimeException(e);
+      }
+  }
+
+  public NSData(String value, String encoding) throws UnsupportedEncodingException {
+      this(bytesWithEncoding(value, encoding));
+  }
 
   public byte[] bytes() {
     return bytes(0, _range.length());
@@ -76,6 +79,12 @@ public class NSData implements Serializable, Cloneable {
     return _bytes;
   }
 
+  public ByteArrayInputStream stream() {
+      byte bytes[] = immutableBytes();
+      NSRange range = immutableRange();
+      return new ByteArrayInputStream(bytes, range.location(), range.length());
+  }
+  
   public int _offset() {
     return _range.location();
   }

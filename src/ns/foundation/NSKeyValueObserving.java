@@ -2,6 +2,14 @@ package ns.foundation;
 
 import java.util.EnumSet;
 
+import ns.foundation.collections.NSArray;
+import ns.foundation.collections.NSMutableArray;
+import ns.foundation.collections.NSMutableDictionary;
+import ns.foundation.collections.NSMutableSet;
+import ns.foundation.collections.NSSet;
+import ns.foundation.kvc.NSKeyValueCoding;
+import ns.foundation.kvc.NSKeyValueCodingAdditions;
+
 
 
 public interface NSKeyValueObserving extends NSKeyValueCodingAdditions {

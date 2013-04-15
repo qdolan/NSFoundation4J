@@ -4,9 +4,13 @@ import java.io.Serializable;
 import java.lang.reflect.InvocationTargetException;
 
 import ns.foundation._private._NSMethod;
+import ns.foundation.collections.NSMutableDictionary;
+import ns.foundation.kvc.NSKeyValueCoding;
+import ns.foundation.utilities._NSReflectionUtilities;
 
 
 public class NSSelector<T> implements Serializable {
+  private static final long serialVersionUID = 162603589593094037L;
   protected static final Class<?>[] _NoClassArray = new Class[0];
   protected static final Object[] _NoObjectArray = new Object[0];
 

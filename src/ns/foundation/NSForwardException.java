@@ -4,10 +4,10 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintStream;
 
-public class NSForwardException extends RuntimeException
-{
-  public static RuntimeException _runtimeExceptionForThrowable(Throwable throwable)
-  {
+public class NSForwardException extends RuntimeException {
+  private static final long serialVersionUID = -5352321283527007430L;
+
+  public static RuntimeException _runtimeExceptionForThrowable(Throwable throwable) {
     if (throwable == null)
       return null;
     if (throwable instanceof RuntimeException)
@@ -23,28 +23,23 @@ public class NSForwardException extends RuntimeException
     return throwable;
   }
 
-  public NSForwardException(Throwable wrapped, String extraMessage)
-  {
+  public NSForwardException(Throwable wrapped, String extraMessage) {
     super(extraMessage, _originalThrowable(wrapped));
   }
 
-  public NSForwardException(String message, Throwable cause)
-  {
+  public NSForwardException(String message, Throwable cause) {
     super(message, _originalThrowable(cause));
   }
 
-  public NSForwardException(Throwable wrapped)
-  {
+  public NSForwardException(Throwable wrapped) {
     super(wrapped);
   }
 
-  public Throwable originalException()
-  {
+  public Throwable originalException() {
     return getCause();
   }
 
-  public String stackTrace()
-  {
+  public String stackTrace() {
     final StringBuffer sb = new StringBuffer();
     OutputStream out = new OutputStream() {
       @Override
@@ -57,8 +52,7 @@ public class NSForwardException extends RuntimeException
   }
 
   @Override
-  public String toString()
-  {
+  public String toString() {
     return getClass().getName() + " [" + getCause().getClass().getName() + "] " + getCause().getMessage() + ":" + getMessage();
   }
 }

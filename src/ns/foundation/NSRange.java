@@ -2,8 +2,10 @@ package ns.foundation;
 
 import java.io.Serializable;
 
+
 public class NSRange extends Object implements Serializable, Cloneable {
-	
+	private static final long serialVersionUID = 6428767657252880161L;
+
 	public static final NSRange ZeroRange = new NSRange();
 	
 	/** 

@@ -2,6 +2,8 @@ package ns.foundation;
 
 import java.util.EnumSet;
 
+import ns.foundation.collections.NSSet;
+
 
 public interface NSObservable extends NSKeyValueObserving {
   public boolean automaticallyNotifiesObserversForKey(String key);

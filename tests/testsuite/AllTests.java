@@ -2,17 +2,17 @@ package testsuite;
 
 import junit.framework.Test;
 import junit.framework.TestSuite;
-import ns.foundation.TestNSArray;
-import ns.foundation.TestNSDictionary;
-import ns.foundation.TestNSMutableArray;
-import ns.foundation.TestNSMutableDictionary;
-import ns.foundation.TestNSMutableRange;
-import ns.foundation.TestNSMutableSet;
-import ns.foundation.TestNSNotificationCenter;
-import ns.foundation.TestNSRange;
-import ns.foundation.TestNSSelector;
-import ns.foundation.TestNSSet;
-import ns.foundation.TestNSTimestamp;
+import ns.foundation.tests.TestNSArray;
+import ns.foundation.tests.TestNSDictionary;
+import ns.foundation.tests.TestNSMutableArray;
+import ns.foundation.tests.TestNSMutableDictionary;
+import ns.foundation.tests.TestNSMutableRange;
+import ns.foundation.tests.TestNSMutableSet;
+import ns.foundation.tests.TestNSNotificationCenter;
+import ns.foundation.tests.TestNSRange;
+import ns.foundation.tests.TestNSSelector;
+import ns.foundation.tests.TestNSSet;
+import ns.foundation.tests.TestNSTimestamp;
 
 public class AllTests extends TestSuite {
 

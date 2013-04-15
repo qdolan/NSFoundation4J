@@ -6,6 +6,7 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 
 public class NSTimestamp extends Timestamp {
+  private static final long serialVersionUID = 2415000026984244662L;
 
   public static final long DistantPastJavaTime = -62125920000000L;
   public static final long DistantFutureJavaTime = 8223372036854775807L;
